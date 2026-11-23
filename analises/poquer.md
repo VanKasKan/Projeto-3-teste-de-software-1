@@ -12,9 +12,17 @@
 
 > Orientação: Informem o parâmetro ou regra, deem um nome à classe e descrevam a faixa ou propriedade que inclui seus membros. Registrem classes válidas e inválidas quando previstas.
 
+
 | Parâmetro ou regra | Classe de equivalência | Domínio ou condição |
 |---|---|---|
-| Quantidade de itens | Faixa válida | Inteiros de 1 a 10 |
+| Lista com valores das cartas | Formato válido | Lista com exatamente 5 elementos do tipo ValorCarta|
+| Lista com valores das cartas | Formato inválido gera IllegalArgumentException | Lista de tamanho diferente de 5 |
+| Lista com valores das cartas | Formato inválido gera NullPointerException | Lista Nula ou com elemento Nulo |
+| Lista com naipes das cartas | Formato válido | Lista com exatamente 5 elementos do tipo Naipe|
+| Lista com naipes das cartas | Formato inválido gera IllegalArgumentException | Lista de tamanho diferente de 5 |
+| Lista com naipes das cartas | Formato inválido gera NullPointerException | Lista Nula ou com elemento Nulo |
+| Os pares cinco pares devem ser distintos | Pares válidos | Cada par (valor,naipe) é único |
+| Os pares cinco pares devem ser distintos | Pares inválidos geram IllegalArgumentException | Existe ao menos 2 pares iguais |
 
 #### Valores-limite
 
