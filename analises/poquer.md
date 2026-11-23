@@ -11,7 +11,7 @@
 #### Classes de equivalência
 
 > Orientação: Informem o parâmetro ou regra, deem um nome à classe e descrevam a faixa ou propriedade que inclui seus membros. Registrem classes válidas e inválidas quando previstas.
-
+definição: sequência refere-se 
 
 | Parâmetro ou regra | Classe de equivalência | Domínio ou condição |
 |---|---|---|
@@ -21,8 +21,23 @@
 | Lista com naipes das cartas | Formato válido | Lista com exatamente 5 elementos do tipo Naipe|
 | Lista com naipes das cartas | Formato inválido gera IllegalArgumentException | Lista de tamanho diferente de 5 |
 | Lista com naipes das cartas | Formato inválido gera NullPointerException | Lista Nula ou com elemento Nulo |
-| Os pares cinco pares devem ser distintos | Pares válidos | Cada par (valor,naipe) é único |
-| Os pares cinco pares devem ser distintos | Pares inválidos geram IllegalArgumentException | Existe ao menos 2 pares iguais |
+| Pares (valor, naipe) | Pares válidos | Cada par é único |
+| Pares (valor, naipe) | Pares inválidos geram IllegalArgumentException | Existe ao menos 2 pares iguais |
+| Sequência | É sequência | 5 cartas de valores consecutivos conforme a ordem `AS`, `DOIS`, `TRES`, `QUATRO`, `CINCO`, `SEIS`, `SETE`, `OITO`, `NOVE`, `DEZ`, `VALETE`, `DAMA` e `REI`|
+| Sequência | É sequência | `DEZ`, `VALETE`, `DAMA`, `REI` e `AS` |
+| Sequência | Não é sequência | Demais combinações de `AS`, `DOIS`, `TRES`, `QUATRO`, `CINCO`, `SEIS`, `SETE`, `OITO`, `NOVE`, `DEZ`, `VALETE`, `DAMA` e `REI` não inclusas em `É sequência` |
+| Sequência de cartas |`SEQUENCIA_REAL_DO_MESMO_NAIPE` | mão possuí 10–J–Q–K–A do mesmo naipe |
+| Sequência de cartas |`SEQUENCIA_DO_MESMO_NAIPE` | mão possuí sequência do mesmo naipe E NÃO É `SEQUENCIA_REAL_DO_MESMO_NAIPE` |
+| Sequência de cartas |`QUADRA` |  mão possui quatro cartas do mesmo valor E NÃO É `SEQUENCIA_DO_MESMO_NAIPE` | 
+| Sequência de cartas |`TRINCA_E_PAR` |  mão possui três cartas de um valor e duas de outro valor E NÃO É `QUADRA` |
+| Sequência de cartas |`CINCO_DO_MESMO_NAIPE` |  mão possui cinco cartas do mesmo naipe sem sequência E NÃO É `TRINCA_E_PAR` |
+| Sequência de cartas |`SEQUENCIA` | mão possui sequência com mais de um naipe E NÃO É`CINCO_DO_MESMO_NAIPE` |
+| Sequência de cartas |`TRINCA` |  mão possui três cartas do mesmo valor E NÃO É`SEQUENCIA` |
+| Sequência de cartas |`DOIS_PARES` |  mão possui dois pares de valores distintos E NÃO É`TRINCA` | 
+| Sequência de cartas |`UM_PAR` | mão possui duas cartas do mesmo valor E NÃO É`DOIS_PARES` | 
+| Sequência de cartas |`CARTA_ALTA` | se não for nenhuma mão anterior E NÃO É`UM_PAR` |
+
+
 
 #### Valores-limite
 
@@ -30,7 +45,21 @@
 
 | Parâmetro ou regra | Valor-limite | Classes separadas e inclusão do limite |
 |---|---|---|
-| Quantidade de itens | 10 | Até 10 é válido. Acima de 10 é inválido. |
+| Lista com valores das cartas | 5 | exatamente 5 é válido, diferente de 5 é inválido|
+| Lista com naipes das cartas | 5 | exatamente 5 é válido, diferente de 5 é inválido|
+| Pares (valor, naipe) distintos | 5 | exatamente 5 pares únicos é válido, menos de 5 pares únicos é inválido |
+| Sequência | 5 | 5 cartas de valores consecutivos é sequência, menos de 5 não é sequência|
+| Sequência de cartas :`SEQUENCIA_REAL_DO_MESMO_NAIPE` | 10–J–Q–K–A | mão com 10–J–Q–K–A é `SEQUENCIA_REAL_DO_MESMO_NAIPE`, mão sem 10–J–Q–K–A não é |
+| Sequência de cartas :`SEQUENCIA_DO_MESMO_NAIPE` | sequência de 5 cartas de mesmo naipe, 10–J–Q–K–A | sequência de menos de 5 cartas do mesmo naipe não é `SEQUENCIA_DO_MESMO_NAIPE`, sequência de exatamente 5 cartas do mesmo naipe é `SEQUENCIA_DO_MESMO_NAIPE`, 10–J–Q–K–A de mesmo naipe não é `SEQUENCIA_DO_MESMO_NAIPE`|
+| Sequência de cartas :`QUADRA` | 4 cartas do mesmo valor / sequencia | mão possuí menos de 4 cartas do mesmo valor não é `QUADRA`, mão possui 4 ou mais cartas do mesmo valor e não é sequência é `QUADRA`, mão possui 4 ou mais cartas do mesmo valor e é sequência não é `QUADRA`| 
+
+| Sequência de cartas :`TRINCA_E_PAR` |  mão possui três cartas de um valor e duas de outro valor E NÃO É `QUADRA` |
+| Sequência de cartas :`CINCO_DO_MESMO_NAIPE` |  mão possui cinco cartas do mesmo naipe sem sequência E NÃO É `TRINCA_E_PAR` |
+| Sequência de cartas :`SEQUENCIA` | mão possui sequência com mais de um naipe E NÃO É`CINCO_DO_MESMO_NAIPE` |
+| Sequência de cartas :`TRINCA` |  mão possui três cartas do mesmo valor E NÃO É`SEQUENCIA` |
+| Sequência de cartas :`DOIS_PARES` |  mão possui dois pares de valores distintos E NÃO É`TRINCA` | 
+| Sequência de cartas :`UM_PAR` | mão possui duas cartas do mesmo valor E NÃO É`DOIS_PARES` | 
+| Sequência de cartas :`CARTA_ALTA` | se não for nenhuma mão anterior E NÃO É`UM_PAR` |
 
 #### Tabela de decisão
 
