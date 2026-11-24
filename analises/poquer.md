@@ -86,4 +86,13 @@ definição: sequência refere-se
 
 | Método ou trecho | Decisão, condição ou caminho | Obrigação de cobertura |
 |---|---|---|
-| `validarPedido`, checagem do limite máximo | A decisão verifica se a quantidade excede o limite. | Exercitar os resultados verdadeiro e falso da decisão. |
+|classificar, linha55| Verifica se cartas tem o mesmo naipe e se formam uma sequência alta com Às | Se verdadeiro, classifica como `EQUENCIA_REAL_DO_MESMO_NAIPE`, se falso ignora |
+|classificar, linha58| Verifica se cartas tem o mesmo naipe e se formam uma sequência | Se verdadeiro classifica como `SEQUENCIA_DO_MESMO_NAIPE`, se falso ignora |
+|classificar, linha61| Verifica se algum valor de carta se repete exatamente 4 vezes | Se verdadeiro classifica como `QUADRA`, se falso ignora |
+|classificar, linha64| Verifica se algum valor de carta se repete exatamente 3 vezes e se algum outro valor se repete exatamente 2 vezes | Se verdadeiro classifica como `TRINCA_E_PAR`, se falso ignora |
+|classificar, linha67| Verifica se as 5 cartas são do mesmo naipe | Se verdadeiro classifica como `CINCO_DO_MESMO_NAIPE` , se falso ignora |
+|classificar, linha70| Verifica se as cartas formam uma sequência | Se verdadeiro classifica como `SEQUENCIA`, se falso ignora |
+|classificar, linha73| Verifica se algum valor de carta se repete exatamente 3 vezes | Se verdadeiro classifica como `TRINCA`, se falso ignora |
+|classificar, linha76| Verifica se há 02 valores distintos, os quais se cada um se repete exatamente 2 vezes nas cartas | Se verdadeiro classifica como `DOIS_PARES`, se falso ignora |
+|classificar, linha79| Verifica se algum valor de carta se repete exatamente 2 vezes | Se verdadeiro classifica como `UM_PARES`, se falso classifica como `CARTA_ALTA` |
+
