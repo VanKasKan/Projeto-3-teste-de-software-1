@@ -57,3 +57,4 @@
 | consolidarParcialmente, linha 44| Verifica se a média está > 5 e a menor nota é > 3| Se verdadeiro, retorna APRN, se falso, ignora. |
 | consolidarParcialmente | Todas as condicionais foram ignoradas | Retorna REC.
 | arredondarNota | Verifica se a nota ou média possuem mais que duas casas decimais após a vírgula | Arredonda para cima  para a primeira casa decimal após a vírgula|
+| arredondarNota, linha 52| Verifica a validade da nota, no caso se ela é um número finito e entre 0 e 10| Se for inválido, ThrowIllegalArgument, se não, ignora.|
