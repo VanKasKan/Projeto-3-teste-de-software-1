@@ -35,7 +35,7 @@ definição: sequência refere-se
 | Sequência de cartas |`TRINCA` |  mão possui três cartas do mesmo valor E NÃO É`SEQUENCIA` |
 | Sequência de cartas |`DOIS_PARES` |  mão possui dois pares de valores distintos E NÃO É`TRINCA` | 
 | Sequência de cartas |`UM_PAR` | mão possui duas cartas do mesmo valor E NÃO É`DOIS_PARES` | 
-| Sequência de cartas |`CARTA_ALTA` | se não for nenhuma mão anterior E NÃO É`UM_PAR` |
+| Sequência de cartas |`CARTA_ALTA` | se não for 'UM_PAR' |
 
 
 
@@ -66,6 +66,19 @@ definição: sequência refere-se
 | Regra | Combinação de condições | Ação prevista na especificação |
 |---|---|---|
 | DEMO-01 | Quantidade válida e cadastro ativo | Aceitar o pedido |
+| EXC-01 | Lista nula ou elemento nulo | retorna NullPointerException |
+| EXC-02 | Lista de valores ou naipes tem tamanho diferente de 5 | retorna IllegalArgumentException |
+| EXC-03 | Entrada tem 01 par valor,naipe repetido | gera exceção |
+| REG-01 | Entrada é 10–J–Q–K–A | classifica como `SEQUENCIA_REAL_DO_MESMO_NAIPE`|
+| REG-02 |  mão possuí sequência do mesmo naipe E NÃO É `SEQUENCIA_REAL_DO_MESMO_NAIPE`| classifica como `SEQUENCIA_DO_MESMO_NAIPE` |
+| REG-03 | mão possui quatro cartas do mesmo valor E NÃO É `SEQUENCIA_DO_MESMO_NAIPE` | classifica como `QUADRA` |
+| REG-04 | mão possui três cartas de um valor e duas de outro valor E NÃO É `QUADRA` | classifica como `TRINCA_E_PAR` |
+| REG-05 | mão possui cinco cartas do mesmo naipe sem sequência E NÃO É `TRINCA_E_PAR` | classifica como `CINCO_DO_MESMO_NAIPE` |
+| REG-06 | mão possui sequência com mais de um naipe E NÃO É`CINCO_DO_MESMO_NAIPE` | classifica como `SEQUENCIA` |
+| REG-07 | mão possui três cartas do mesmo valor E NÃO É`SEQUENCIA`| classifica como `TRINCA` |
+| REG-08 | mão possui dois pares de valores distintos E NÃO É`TRINCA` | classifica como `DOIS_PARES` |
+| REG-09 | mão possui duas cartas do mesmo valor E NÃO É`DOIS_PARES` | classifica como `UM_PAR`|
+| REG-10 | mão não é 'UM_PAR' | classifica como `CARTA_ALTA`| 
 
 ### Análise caixa-branca do grupo
 
