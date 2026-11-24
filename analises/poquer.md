@@ -51,7 +51,7 @@ definição: sequência refere-se
 | Sequência | 5 | 5 cartas de valores consecutivos é sequência, menos de 5 não é sequência|
 | Sequência de cartas :`SEQUENCIA_REAL_DO_MESMO_NAIPE` | 10–J–Q–K–A | mão com 10–J–Q–K–A é `SEQUENCIA_REAL_DO_MESMO_NAIPE`, mão sem 10–J–Q–K–A não é |
 | Sequência de cartas :`SEQUENCIA_DO_MESMO_NAIPE` | sequência de 5 cartas de mesmo naipe, 10–J–Q–K–A | sequência de menos de 5 cartas do mesmo naipe não é `SEQUENCIA_DO_MESMO_NAIPE`, sequência de exatamente 5 cartas do mesmo naipe é `SEQUENCIA_DO_MESMO_NAIPE`, 10–J–Q–K–A de mesmo naipe não é `SEQUENCIA_DO_MESMO_NAIPE`|
-| Sequência de cartas :`QUADRA` | 4 cartas do mesmo valor / sequencia | mão possuí menos de 4 cartas do mesmo valor não é `QUADRA`, mão possui 4 caras do mesmo valor é `QUADRA`| 
+| Sequência de cartas :`QUADRA` | 4 cartas do mesmo valor | mão possuí menos de 4 cartas do mesmo valor não é `QUADRA`, mão possui 4 caras do mesmo valor é `QUADRA`| 
 | Sequência de cartas :`TRINCA_E_PAR` | A-A-B-B-B | Seja A, B valores de cartas distintos, A-A-B-B-B é `TRINCA_E_PAR`, A-B-B-B-B, A-C-B-B-B, A-A-C-B-B não é `TRINCA_E_PAR`|
 | Sequência de cartas :`CINCO_DO_MESMO_NAIPE` | 5 cartas do mesmo naipe | 5 cartas do mesmo naipe sem sequência e que não é `TRINCA_E_PAR` é `CINCO_DO_MESMO_NAIPE`, menos de 5 cartas do mesmo naipe não é `CINCO_DO_MESMO_NAIPE`  |
 | Sequência de cartas :`SEQUENCIA` | 5 cartas consecutivas, 2 naipes | menos de 5 cartas consecutivas com 2 ou mais naipes distintos não é `SEQUENCIA`, exatamente 5 cartas com 2 ou mais naipes distintos é `SEQUENCIA`, exatamente 5 cartas com 1 único naipe não é `SEQUENCIA`|
@@ -65,7 +65,6 @@ definição: sequência refere-se
 
 | Regra | Combinação de condições | Ação prevista na especificação |
 |---|---|---|
-| DEMO-01 | Quantidade válida e cadastro ativo | Aceitar o pedido |
 | EXC-01 | Lista nula ou elemento nulo | retorna NullPointerException |
 | EXC-02 | Lista de valores ou naipes tem tamanho diferente de 5 | retorna IllegalArgumentException |
 | EXC-03 | Entrada tem 01 par valor,naipe repetido | gera exceção |
