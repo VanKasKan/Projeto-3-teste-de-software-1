@@ -78,7 +78,7 @@ definição: sequência refere-se
 | REG-07 | mão possui três cartas do mesmo valor E NÃO É`SEQUENCIA`| classifica como `TRINCA` |
 | REG-08 | mão possui dois pares de valores distintos E NÃO É`TRINCA` | classifica como `DOIS_PARES` |
 | REG-09 | mão possui duas cartas do mesmo valor E NÃO É`DOIS_PARES` | classifica como `UM_PAR`|
-| REG-10 | mão não é 'UM_PAR' | classifica como `CARTA_ALTA`| 
+| REG-10 | mão não é `UM_PAR` | classifica como `CARTA_ALTA`| 
 
 ### Análise caixa-branca do grupo
 
