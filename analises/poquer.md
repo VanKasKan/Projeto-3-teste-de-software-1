@@ -52,13 +52,12 @@ definição: sequência refere-se
 | Sequência de cartas :`SEQUENCIA_REAL_DO_MESMO_NAIPE` | 10–J–Q–K–A | mão com 10–J–Q–K–A é `SEQUENCIA_REAL_DO_MESMO_NAIPE`, mão sem 10–J–Q–K–A não é |
 | Sequência de cartas :`SEQUENCIA_DO_MESMO_NAIPE` | sequência de 5 cartas de mesmo naipe, 10–J–Q–K–A | sequência de menos de 5 cartas do mesmo naipe não é `SEQUENCIA_DO_MESMO_NAIPE`, sequência de exatamente 5 cartas do mesmo naipe é `SEQUENCIA_DO_MESMO_NAIPE`, 10–J–Q–K–A de mesmo naipe não é `SEQUENCIA_DO_MESMO_NAIPE`|
 | Sequência de cartas :`QUADRA` | 4 cartas do mesmo valor / sequencia | mão possuí menos de 4 cartas do mesmo valor não é `QUADRA`, mão possui 4 ou mais cartas do mesmo valor e não é sequência é `QUADRA`, mão possui 4 ou mais cartas do mesmo valor e é sequência não é `QUADRA`| 
-
-| Sequência de cartas :`TRINCA_E_PAR` |  mão possui três cartas de um valor e duas de outro valor E NÃO É `QUADRA` |
-| Sequência de cartas :`CINCO_DO_MESMO_NAIPE` |  mão possui cinco cartas do mesmo naipe sem sequência E NÃO É `TRINCA_E_PAR` |
-| Sequência de cartas :`SEQUENCIA` | mão possui sequência com mais de um naipe E NÃO É`CINCO_DO_MESMO_NAIPE` |
-| Sequência de cartas :`TRINCA` |  mão possui três cartas do mesmo valor E NÃO É`SEQUENCIA` |
-| Sequência de cartas :`DOIS_PARES` |  mão possui dois pares de valores distintos E NÃO É`TRINCA` | 
-| Sequência de cartas :`UM_PAR` | mão possui duas cartas do mesmo valor E NÃO É`DOIS_PARES` | 
+| Sequência de cartas :`TRINCA_E_PAR` | A-A-B-B-B | Seja A, B valores de cartas distintos, A-A-B-B-B é `TRINCA_E_PAR`, A-B-B-B-B, A-C-B-B-B, A-A-C-B-B não é `TRINCA_E_PAR`|
+| Sequência de cartas :`CINCO_DO_MESMO_NAIPE` | 5 cartas do mesmo naipe | 5 cartas do mesmo naipe sem sequência e que não é `TRINCA_E_PAR` é `CINCO_DO_MESMO_NAIPE`, menos de 5 cartas do mesmo naipe não é `CINCO_DO_MESMO_NAIPE`  |
+| Sequência de cartas :`SEQUENCIA` | 5 cartas consecutivas, 2 naipes | menos de 5 cartas consecutivas com 2 ou mais naipes distintos não é `SEQUENCIA`, exatamente 5 cartas com 2 ou mais naipes distintos é `SEQUENCIA`, exatamente 5 cartas com 1 único naipe não é `SEQUENCIA`|
+| Sequência de cartas :`TRINCA` | 3 | menos de 3 cartas do mesmo valor não é `TRINCA`, exatamente 3 cartas do mesmo valor é `TRINCA`, mais de 3 cartas do mesmo valor não é `TRINCA` |
+| Sequência de cartas :`DOIS_PARES` | A-A-B-B-C | Seja A, B, C, D valores distintos A-A-B-B-B não é `DOIS_PARES`, A-A-B-B-C é `DOIS_PARES`, A-A-B-C-D não é `DOIS_PARES`| 
+| Sequência de cartas :`UM_PAR` | A-A-B-C-D | Seja A,B,C,D,E valores distintos A-B-C-D-E não é `UM_PAR`, A-A-B-C-D é `UM_PAR`, A-A-B-B-C não é `UM_PAR` | 
 | Sequência de cartas :`CARTA_ALTA` | se não for nenhuma mão anterior E NÃO É`UM_PAR` |
 
 #### Tabela de decisão
