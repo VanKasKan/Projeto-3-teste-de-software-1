@@ -35,7 +35,7 @@ definição: sequência refere-se
 | Sequência de cartas |`TRINCA` |  mão possui três cartas do mesmo valor E NÃO É`SEQUENCIA` |
 | Sequência de cartas |`DOIS_PARES` |  mão possui dois pares de valores distintos E NÃO É`TRINCA` | 
 | Sequência de cartas |`UM_PAR` | mão possui duas cartas do mesmo valor E NÃO É`DOIS_PARES` | 
-| Sequência de cartas |`CARTA_ALTA` | se não for 'UM_PAR' |
+| Sequência de cartas |`CARTA_ALTA` | se não for `UM_PAR` |
 
 
 
